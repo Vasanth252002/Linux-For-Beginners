@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/commandbgact"
+    tools:context=".fileactnav"
+    tools:ignore="SpeakableTextPresentCheck">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/front1"
+            android:layout_width="match_parent"
+            android:layout_height="3166dp"
+            android:background="@drawable/commandbgact"
+            tools:context=".fileactnav">
+
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="39dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="FILES"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:text="
+cat (short for concatenate) is one of the most frequently used commands in Linux.
+It is used to list the contents of a file on the standard output (sdout). To run this command, type cat followed
+by the file’s name and its extension. For instance: cat file.txt.
+\n
+Here are other ways to use the cat command:
+\n\n
+cat > filename creates a new file\n\n
+cat filename1 filename2>filename3 joins two files (1 and 2) and stores the output of them in a new file (3)\n\n
+to convert a file to upper or lower case use, cat filename | tr a-z A-Z >output.txt\n\n\n
+--Use the cp command to copy files from the current directory to a different directory.
+For instance, the command cp scenery.jpg /home/username/Pictures would create a copy of scenery.jpg
+(from your current directory) into the Pictures directory.\n\n\n
+The primary use of the mv command is to move files, although it can also be used to rename files.
+
+The arguments in mv are similar to the cp command. You need to type mv, the file’s name, and the destination’s directory. For example: mv file.txt /home/username/Documents.
+
+To rename files, the Linux command is mv oldname.ext newname.ext\n\n\n
+--Use mkdir command to make a new directory — if you type mkdir Music it will create a directory called Music.
+
+There are extra mkdir commands as well:
+
+To generate a new directory inside another directory, use this Linux basic command mkdir Music/Newfile
+use the p (parents) option to create a directory in between two existing directories. For example, mkdir -p Music/2020/Newfile will create the new “2020” file.\n
+If you need to delete a directory, use the rmdir command. However, rmdir only allows you to delete empty directories\n\n\n
+--The rm command is used to delete directories and the contents within them. If you only want to delete the directory — as an alternative to rmdir — use rm -r.
+
+Note: Be very careful with this command and double-check which directory you are in. This will delete everything and there is no undo.\n\n\n
+--The touch command allows you to create a blank new file through the Linux command line. As an example, enter touch /home/username/Documents/Web.html to create an HTML file entitled Web under the Documents directory.\n\n"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
+
+

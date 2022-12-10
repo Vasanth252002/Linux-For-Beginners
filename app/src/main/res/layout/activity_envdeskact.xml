@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/archbg"
+    tools:context=".envdeskact"
+    tools:ignore="SpeakableTextPresentCheck">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/front1"
+            android:layout_width="match_parent"
+            android:layout_height="2055dp"
+            android:background="@drawable/archbg"
+            tools:context=".envdeskact">
+
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="39dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="DESKTOP ENVIRONMENTS"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="108dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:text="
+FOR GNOME:\n\n
+First step is to install X environment. Type the below command to install the Xorg as display server.
+\n\n
+pacman -S xorg\n\n
+Now, you can install GNOME desktop environment on Arch Linux using:
+\n\n
+pacman -S gnome\n\n
+The last step includes enabling the display manager GDM for Arch. I also suggest enabling Network Manager
+\n\n
+systemctl start gdm.service\n
+systemctl enable gdm.service\n
+systemctl enable NetworkManager.service\n\n
+Now exit from chroot using the exit command:
+\n\n
+exit\n\n
+And then shutdown your system
+\n\n
+shutdown now\n\n
+Don’t forget to take out the live USB before powering on the system again. If everything goes well, you should see the Grub screen and then the GNOME login screen.\n\n
+FOR KDE:\n\n
+To run KDE desktop, you need the following packages:
+\n
+--Xorg group\n
+--KDE Plasma Desktop Environment\n
+--Wayland session for KDE Plasma\n
+KDE applications group (consists of KDE specific applications including the Dolphin manager and other useful apps)
+You can install of the above using the following command:
+\n\n
+pacman -S xorg plasma plasma-wayland-session kde-applications\n\n
+Once installed, enable the Display Manager and Network Manager services:
+\n\n
+systemctl enable sddm.service\n
+systemctl enable NetworkManager.service\n\n
+Almost there. Shutdown your system:
+\n\n
+shutdown now\n\n
+Power on your system and you should see the KDE login.\n\n"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

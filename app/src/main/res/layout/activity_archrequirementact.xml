@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/archbg"
+    tools:context=".archrequirementact"
+    tools:ignore="SpeakableTextPresentCheck">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/front1"
+            android:layout_width="match_parent"
+            android:layout_height="1136dp"
+            android:background="@drawable/archbg"
+            tools:context=".archrequirementact">
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="37dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="REQUIREMENTS"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="138dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:text="
+This tutorial shows you how to install Arch Linux in easy to follow steps.\n
+Arch Linux is a general-purpose rolling release Linux distribution which is very popular among the DIY enthusiasts and hardcore Linux users.\n
+The default installation covers only a minimal base system and expects the end user to configure the system by himself/herself.
+\nThis is why installing Arch Linux is a challenge in itself but at the same time, it is a learning opportunity for intermediate Linux users.\n\n
+The method discussed here wipes out existing operating system(s) from your computer and install Arch Linux on it. So if you are going to follow this tutorial,
+make sure that you have backed up your files or else you’ll lose all of it. You have been warned.\n
+- A x86_64 (i.e. 64 bit) compatible machine\n
+– Minimum 512 MB of RAM (recommended 2 GB)\n
+– At least 2 GB of free disk space (recommended 20 GB for basic usage with a desktop environment)\n
+– An active internet connection\n
+– A USB drive with minimum 2 GB of storage capacity\n
+– Familiarity with Linux command line\n"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
+
+

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/actbg"
+    tools:context=".commandsact"
+    tools:ignore="SpeakableTextPresentCheck">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/front1"
+            android:layout_width="match_parent"
+            android:layout_height="980dp"
+            android:background="@drawable/actbg"
+            tools:context=".commandsact">
+
+            <ImageView
+                android:id="@+id/filenavimg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="32dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/filesimg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView13"
+                app:srcCompat="@drawable/commlogo" />
+
+            <TextView
+                android:id="@+id/filenavtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="17dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginBottom="136dp"
+                android:text="FILE NAVIGATION"
+                android:textColor="#03A9F4"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toTopOf="@+id/filestext"
+                app:layout_constraintEnd_toEndOf="@+id/filenavimg"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="34dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="67dp"
+                android:text="SELECT:"
+                android:textColor="#F1EEEE"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toTopOf="@+id/filenavtext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/filesimg"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="28dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/permimg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/commlogo" />
+
+
+            <TextView
+                android:id="@+id/filestext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="71dp"
+                android:text="FILES"
+                android:textColor="#03A9F4"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toTopOf="@+id/permimg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/filenavtext" />
+
+
+            <ImageView
+                android:id="@+id/permimg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="92dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/userstext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/filestext"
+                app:srcCompat="@drawable/commlogo" />
+
+            <TextView
+                android:id="@+id/permtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="506dp"
+                android:layout_marginBottom="95dp"
+                android:text="PERMISSIONS"
+                android:textColor="#03A9F4"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toTopOf="@+id/usersimg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/usersimg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="176dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/permtext"
+                app:srcCompat="@drawable/commlogo" />
+
+            <TextView
+                android:id="@+id/userstext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="23dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginBottom="231dp"
+                android:gravity="center"
+                android:text="DISKS AND LOCATIONS"
+                android:textColor="#03A9F4"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/usersimg"
+                app:layout_constraintTop_toBottomOf="@+id/permimg" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
+

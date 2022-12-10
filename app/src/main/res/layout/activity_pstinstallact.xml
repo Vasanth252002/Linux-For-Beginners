@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/archbg"
+    tools:context=".pstinstallact"
+    tools:ignore="SpeakableTextPresentCheck">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/front1"
+            android:layout_width="match_parent"
+            android:layout_height="3384dp"
+            android:background="@drawable/archbg"
+            tools:context=".pstinstallact">
+
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="39dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="POST INSTALLATION"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="108dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:text="
+Generate a fstab file to define how disk partitions, block devices or remote file systems are mounted into the filesystem.
+\n\n
+genfstab -U /mnt >> /mnt/etc/fstab\n\n
+Now use arch-chroot and enter the mounted disk as root. Actually, now you are using the just installed Arch Linux system on the disk. You’ll have to do some configuration changes to the installed system so that you could run it properly when you boot from the disk.
+\n\n
+arch-chroot /mnt\n\n
+Setting Timezone
+To set up timezone on Linux, you can use timedatectl command. First find your time zone:
+\n\n
+timedatectl list-timezones\n\n
+And then set it up like this (replace Europe/Paris with your desired time zone):
+\n\n
+timedatectl set-timezone Europe/Paris\n\n
+Setting up Locale
+This is what sets the language, numbering, date and currency formats for your system.
+
+The file /etc/locale.gen contains all the local settings and system language in a commented format.
+
+Open the file using Vim or Nano editor and uncomment (remove the # from the start of the line) the language you prefer. We have used en_GB.UTF-8 (English with Great Britain).
+
+Now generate the locale config in /etc directory file using the below commands one by one:
+\n\n
+locale-gen\n
+echo LANG=en_GB.UTF-8 > /etc/locale.conf\n
+export LANG=en_GB.UTF-8\n\n
+Both locale and timezone settings can be changed later on as well when you are using your Arch Linux system.
+
+--Network configuration\n
+Create a /etc/hostname file and add the hostname entry to this file. Hostname is basically the name of your computer on the network.
+
+Let us set the hostname as myarch. You can choose whatever you want:
+\n\n
+echo myarch > /etc/hostname\n\n
+The next part is to create the hosts file:
+\n\n
+touch /etc/hosts\n\n
+And edit this /etc/hosts file with Vim or Nano editor to add the following lines to it (replace myarch with hostname you chose earlier):
+\n\n
+127.0.0.1	localhost\n
+::1		localhost\n
+127.0.1.1	myarch\n
+Set up root passwd\n\n
+You should also set the password for the root account using the passwd command:
+\n\n
+passwd\n\n
+Step 9: Install Grub bootloader
+This is one of the crucial steps and it differs for UEFI and non-UEFI systems.For the UEFI systems,
+
+Make sure that you are still using arch-chroot. Install required packages:
+\n\n
+pacman -S grub efibootmgr\n\n
+Create the directory where EFI partition will be mounted:
+\n\n
+mkdir /boot/efi\n\n
+Now, mount the ESP partition you had created
+\n\n
+mount /dev/sda1 /boot/efi\n\n
+Install grub like this:
+\n\n
+grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi\n\n
+One last step:
+\n\n
+grub-mkconfig -o /boot/grub/grub.cfg\n\n\n
+To Install grub on Non-UEFI systems
+Install grub package first:
+\n\n
+pacman -S grub\n\n
+And then install grub like this (don’t put the disk number sda1, just the disk name sda):
+\n\n
+grub-install /dev/sda\n\n
+Last step:
+\n\n
+grub-mkconfig -o /boot/grub/grub.cfg\n\n"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

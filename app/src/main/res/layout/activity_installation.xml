@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/archbg"
+    tools:context=".installation"
+    tools:ignore="SpeakableTextPresentCheck">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/front1"
+            android:layout_width="match_parent"
+            android:layout_height="1311dp"
+            android:background="@drawable/archbg"
+            tools:context=".installation">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="39dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="INSTALLATION"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="118dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:text="
+You can connect to WiFi interactively using this helpful utility called wifi-menu. Just enter this command and follow the steps:
+\n\n
+wifi-menu\n\n
+You should be able to see the active connections and connect to them using the password. Once you are connected, check if you could use internet by using the ping command:
+\n\n
+ping google.com\n\n
+If you get bytes in reply, you are connected. Use Ctrl+C to stop the ping reply.\n\n\n
+sync the pacman repository so that you can download and install software:
+\n\n
+pacman -Syy\n\n
+Now, install reflector too that you can use to list the fresh and fast mirrors located in your country:
+\n\n
+pacman -S reflector\n\n
+Make a backup of mirror list (just in case):
+\n\n
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak\n\n
+Now, get the good mirror list with reflector and save it to mirrorlist. You can change the country from US to your own country.
+\n\n
+reflector -c 'US' -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist\n\n
+All good to go now.\n\n
+Since you have all the things ready, it’s time to finally install the Arch Linux. You’ll be installing it on the root directory so mount it first.
+
+Do you remember the name of the root partition? Use it to mount it:
+\n\n
+mount /dev/sda2 /mnt\n\n
+With root mounted, it’s time to use the wonderful pacstrap script to install all the necessary packages:
+\n\n
+pacstrap /mnt base linux linux-firmware vim nano\n\n
+It will take some time to download and install these packages. If the downloads get interrupted, no need to panic. You can run the above command once again and it resumed the download."
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
+

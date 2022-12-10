@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/archbg"
+    tools:context=".archbootact"
+    tools:ignore="SpeakableTextPresentCheck">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/front1"
+            android:layout_width="match_parent"
+            android:layout_height="1863dp"
+            android:background="@drawable/archbg"
+            tools:context=".archbootact">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7"
+                app:srcCompat="@drawable/archisoboot" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="39dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="FROM ISO TO BOOT"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="108dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:text="
+Download the ISO from the Arch Linux download page. There are two ways to do so:
+\n-via BitTorrent\n
+-as a direct download\n
+-To download the ISO via torrent, choose between adding a magnet link to your BitTorrent app or downloading the torrent file.\n
+Alternatively, scroll through the page until you find a mirror that’s closest to your current location.\n\n
+Once you have the Arch Linux ISO, you can create a live USB or burn it to a DVD.Create a Live USB of Arch Linux
+The simplest way to create a live USB of Arch Linux is to use an app like Etcher GUI.
+This app is available on both Linux and Windows systems.
+If you are using Linux, create a live USB with the following command:\n\n
+
+dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress &amp;&amp; sync\n\n
+Burn the Arch Linux ISO to a DVDYou can also install Arch Linux from a DVD.
+Use a tool like Brasero or AnyBurn to burn the ISO you downloaded onto a blank DVD.\n\n
+Do note that in some cases, you may not be able to boot from live USB with secure boot enabled. If that’s the case with you, disable the secure boot first.\n
+Once you have created a live USB for Arch Linux, shut down your PC.
+Plugin your USB and boot your system. While booting keep pressing F2, F10 or F12 key (depending upon your system) to go into boot settings.\n
+
+In here, select to boot from USB or removable disk. Once you do that and the system boots, you should see an option like this:\n\n\n\n"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

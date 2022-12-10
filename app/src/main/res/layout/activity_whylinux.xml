@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/archbg"
+    tools:context=".whylinux"
+    tools:ignore="SpeakableTextPresentCheck">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/front1"
+            android:layout_width="match_parent"
+            android:layout_height="3000dp"
+            android:background="@drawable/archbg"
+            tools:context=".whylinux">
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="37dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="WHY LINUX?"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="108dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:text="
+Installing and using Linux on your system is the easiest way to avoid viruses and malware. The security aspect was kept in mind when developing Linux and it is much less vulnerable to viruses compared to Windows.
+
+Programs cannot make changes to the system settings and configuration unless the user is logged in as the root (equivalent to the administrator user in Windows) user. Most users do not log in as the root; hence, they cannot do much damage to the system, except to their own files and programs, since the downloaded file/malware will have limited privileges. You can browse the Internet without worrying about your system getting infected.\n\n
+The Linux system is very stable and is not prone to crashes. The Linux OS runs exactly as fast as it did when first installed, even after several years. Most of us must have experienced how a freshly installed Windows system runs extremely fast and the same system becomes slow after around six months to one year. Then, your only option most of the time is to reinstall the OS and all the other software.
+
+The uptime for the Linux servers is very high and the availability is around 99.9 per cent.\n\n
+Linux runs on a range of hardware, right from supercomputers to watches. You can give new life to your old and slow Windows system by installing a lightweight Linux system, or even run a NAS or media streamer using a particular distribution of Linux. There are also lightweight desktops like Xfce and LXDE which can run on lower-end PCs.\n\n
+The most important aspect of Linux is that its source code is available as it falls under the FOSS category (Free and Open Source Software). The developer community benefits from this as its members have the freedom to view and modify the source code, which is not the case with proprietary software, which they can only use. Several countries are developing their own versions of Linux. This will ultimately help these countries in developing their own OSs for specialised or strategic areas like defence, communications, etc, to begin with.\n\n
+Contrary to the general belief that Linux is only for geeks, it has now become user-friendly and has a good graphical user interface (GUI). It has almost all the functionality that Windows has. The GUI has developed to the extent that most of what typical users want can be done on Linux, as easily as it is done in Windows, without knowing any commands.
+
+In case you are using some applications which run only on Windows, you can install Wine (Windows Emulator), using which you can run those applications on a Linux system.\n\n
+Users have tremendous flexibility in customising the system as per their requirements. There are numerous choices for wallpapers, desktop icons and panels. There are more than half-a-dozen desktop environments to choose from, like GNOME, KDE, etc. For any task, right from the GUI interface and file managers, to DVD burners and browsers, around four to six options are available for any particular software. The Linux versions of most popular browsers are available.\n\n
+This is the most useful aspect for students, as they can use the software to study how it works, before modifying and extending the code to suit their needs. This will also help them to learn the internals of an OS and the software. This process will help in the development of new software and aid innovation based on local needs. \n\n"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
+

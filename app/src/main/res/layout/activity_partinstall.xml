@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/archbg"
+    tools:context=".partinstall"
+    tools:ignore="SpeakableTextPresentCheck">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/front1"
+            android:layout_width="match_parent"
+            android:layout_height="1918dp"
+            android:background="@drawable/archbg"
+            tools:context=".partinstall">
+
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="38dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="28dp"
+                android:text="DISK PARTITION"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="19dp"
+                android:text="
+Use the fdisk command to list all available disk drives:\n\n
+fdisk -l\n\nFind the name of the disk you want to partition. The name is displayed in the /dev/sdX format, where X is the drive letter."
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toTopOf="@+id/part1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+
+            <ImageView
+                android:id="@+id/part1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="18dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/textView10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                app:srcCompat="@drawable/part1" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="24dp"
+                android:text="
+Using the arrow keys, select dos as the label type, and press Enter.\n
+The next screen shows how much free space you have on the selected disk and lets you allocate it. Select New at the bottom of the screen
+and press Enter to begin creating a new disk partition.\n"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toTopOf="@+id/partinfo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/part1" />
+
+
+            <ImageView
+                android:id="@+id/partinfo"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="53dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toTopOf="@+id/textView11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10"
+                app:srcCompat="@drawable/partinfo" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="24dp"
+                android:text="
+Select the partition size, shown in gigabytes. Once you enter the preferred size, press Enter to confirm.\n
+Once prompted, set the partition as Primary and press Enter to confirm.\n
+The new partition is now displayed, along with the free space available on the disk drive.
+Select the Bootable option at the bottom of the screen and press Enter to confirm. This way you make sure that Arch Linux boots from your primary partition installed.\n
+Repeating the process outlined above, you need to create another partition using the remaining disk space.
+Instead of making the new partition bootable, select the Type option at the bottom of the screen and press Enter.\n
+Scroll down on the list until you find 82 Linux swap / Solaris. Press Enter to confirm. This creates a swap space partition. Confirm the changes to the drive by selecting Write at the bottom of the screen.
+Type yes, and press Enter.\n
+Select Quit and press Enter to exit the cfdisk screen.\n\n\n
+You need to format the new partitions to install Arch Linux. To do this, create a file system for each of the partitions.\n
+Use the mkfs command to create an ext4 filesystem for the bootable partition:\n\n
+
+mkfs.ext4 /dev/sdX1\n\n
+Where X is the drive letter of the disk the partition belongs to."
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toTopOf="@+id/fs1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/partinfo" />
+
+
+            <ImageView
+                android:id="@+id/fs1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="17dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toTopOf="@+id/textView12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11"
+                app:srcCompat="@drawable/fs1" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="19dp"
+                android:text="
+Next, create a file system for the swap space partition using the mkswap command:\n\n
+
+mkswap /dev/sdX2\n\n
+Again, replace X with the drive letter of the disk the partition belongs to.\n\n\n
+Now, mount the filesystems you created by running the following commands:\n\n
+
+mount /dev/sdX1 /mnt\n
+swapon /dev/sdX2\n\n
+Where:\n
+
+mount – Mounts the filesystem on the bootable partition.
+swapon – Activates the swap space filesystem.
+X – The drive letter of the disk the partition belongs to."
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toTopOf="@+id/mount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fs1" />
+
+            <ImageView
+                android:id="@+id/mount"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="60dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12"
+                app:srcCompat="@drawable/mount1" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
+
